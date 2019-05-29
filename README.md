@@ -36,3 +36,5 @@ However, [web browsers' support varies](https://developer.mozilla.org/en-US/docs
 ## Known bugs
 
 Doesn't speak Chinese on Android Chrome. I set up another project (<https://github.com/patarapolw/zhres#get-apitts>) for the time being.
+
+Also, this seems to work: <https://stackoverflow.com/a/46740596/9023855> -- <http://translate.google.com/translate_tts?client=tw-ob&tl=zh-CN&q=你好>
