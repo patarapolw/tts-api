@@ -61,7 +61,7 @@ window.speechSynthesis.onvoiceschanged = () => {
     };
 
     if (q.get("q")) {
-        swal("Click OK to speak").then(() => speakButton.click());
+        swal("Click OK to speak").then((r) => { if (r) speakButton.click(); });
     }
 
     function setSpeakerName(lang) {
