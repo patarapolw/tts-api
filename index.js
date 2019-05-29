@@ -4,6 +4,7 @@ window.speechSynthesis.onvoiceschanged = () => {
     const speakerChooser = document.getElementById("tts-speaker-chooser");
     const rateLabel = document.getElementById("tts-rate-label");
     const rateSlider = document.getElementById("tts-rate");
+    const speakButton = document.getElementById("tts-speak");
 
     const q = new URL(location.href).searchParams;
     ttsTextArea.value = q.get("q") || ttsTextArea.value;
@@ -51,13 +52,17 @@ window.speechSynthesis.onvoiceschanged = () => {
         rateLabel.innerHTML = rateSlider.value;
     };
 
-    document.getElementById("tts-speak").onclick = () => {
+    speakButton.onclick = () => {
         const u = new SpeechSynthesisUtterance(ttsTextArea.value)
         u.lang = langChooser.value;
         u.setSpeakerName = speakerChooser.value;
         u.rate = rateSlider.value;
         speechSynthesis.speak(u);
     };
+
+    if (q.get("q")) {
+        swal("Click OK to speak").then(() => speakButton.click());
+    }
 
     function setSpeakerName(lang) {
         speakerChooser.innerHTML = "";
