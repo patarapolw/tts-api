@@ -13,7 +13,7 @@ The URL accepts four parameters
 
 All parameters can be left out.
 
-For example, <https://patarapolw.github.io/tts-api/?q=你好&lang=zh-CN&rate=0.8>
+For example, <https://patarapolw.github.io/tts-api/?q=こんにちは&lang=ja-JP>
 
 ## Usage in your website
 
@@ -32,3 +32,7 @@ However, [web browsers' support varies](https://developer.mozilla.org/en-US/docs
 ## Why?
 
 [online tts - Google Search](http://lmgtfy.com/?q=online+tts) doesn't fullfill my needs. The search result is full of people trying to sell things.
+
+## Known bugs
+
+Doesn't speak Chinese on Android Chrome.
