@@ -1,0 +1,25 @@
+{
+  "name": "tts-api",
+  "version": "0.2.0",
+  "description": "Web Speech API for GET request",
+  "main": "index.js",
+  "repository": "https://github.com/patarapolw/tts-api.git",
+  "author": "<patarapolw@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "speak-tts": "^2.0.8",
+    "sweetalert": "^2.1.2"
+  },
+  "scripts": {
+    "start": "webpack-dev-server",
+    "dev": "yarn start",
+    "build": "webpack --mode=production"
+  },
+  "devDependencies": {
+    "ts-loader": "^6.0.1",
+    "typescript": "^3.5.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  }
+}
