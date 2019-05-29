@@ -65,7 +65,7 @@ window.speechSynthesis.onvoiceschanged = () => {
             if (v.lang === lang) {
                 const option = document.createElement("option");
                 option.value = v.name;
-                option.innerHTML = v.name;
+                option.innerHTML = `${v.name}${v.localService ? "": " [online-only]"}`;
                 if (v.name === defaultSpeaker) {
                     option.selected = true;
                 }
