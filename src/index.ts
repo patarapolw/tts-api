@@ -41,6 +41,24 @@ if (!speech.hasBrowserSupport()) {
         }
 
         langs = langs.filter((l, i) => langs.indexOf(l) === i).sort();
+        if (defaultLang && langs.indexOf(defaultLang) === -1) {
+            for (const l of langs) {
+                if (l.substr(0, 2) === defaultLang.substr(0, 2)) {
+                    defaultLang = l;
+                    break;
+                }
+            }
+
+            if (langs.indexOf(defaultLang) === -1) {
+                for (const l of langs) {
+                    if (new RegExp(defaultLang.substr(0, 2), "i").test(l)) {
+                        defaultLang = l;
+                        break;
+                    }
+                }
+            }
+        }
+
         langs.forEach((l) => {
             const option = document.createElement("option");
             option.value = l;
