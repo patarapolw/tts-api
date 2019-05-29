@@ -48,7 +48,7 @@ window.speechSynthesis.onvoiceschanged = () => {
     };
 
     rateLabel.innerHTML = rateSlider.value = q.get("rate") || rateSlider.value;
-    rateSlider.onchange = () => {
+    rateSlider.oninput = () => {
         rateLabel.innerHTML = rateSlider.value;
     };
 
