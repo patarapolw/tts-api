@@ -35,4 +35,4 @@ However, [web browsers' support varies](https://developer.mozilla.org/en-US/docs
 
 ## Known bugs
 
-Doesn't speak Chinese on Android Chrome.
+Doesn't speak Chinese on Android Chrome. I set up another project (<https://github.com/patarapolw/zhres#get-apitts>) for the time being.
